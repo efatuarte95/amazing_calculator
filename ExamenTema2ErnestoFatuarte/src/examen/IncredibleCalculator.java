@@ -2,10 +2,13 @@ package examen;
 
 import java.util.Scanner;
 
+import utilidades.Leer;
+
 public class IncredibleCalculator {
 
     public static void main(String[] args) {
 
+    	int num1, num2, resultado;
         System.out.println("Selecciona la operación que prefieras realizar: ");
         System.out.println("1. Sumar");
         System.out.println("2. Restar");
@@ -18,6 +21,12 @@ public class IncredibleCalculator {
 
         switch (opcion) {
             case 1: //Sumar. Debes leer dos numeros enteros de entrada e imprimir su suma
+            		System.out.println("Introduzca el primer número:");
+            		num1 = Leer.datoInt();
+            		System.out.println("Introduzca el segundo número:");
+            		num2 = Leer.datoInt();
+            		resultado = num1 + num2;
+            		System.out.println("El resultado de sumar " + num1 + " " + num2 + " es " + resultado);
                     break;
             case 2: // Restar. Debes leer dos números enteros de entrada e imprimir su resta
                     break;
