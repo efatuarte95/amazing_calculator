@@ -29,6 +29,12 @@ public class IncredibleCalculator {
             		System.out.println("El resultado de sumar " + num1 + " " + num2 + " es " + resultado);
                     break;
             case 2: // Restar. Debes leer dos números enteros de entrada e imprimir su resta
+	            	System.out.println("Introduzca el primer número:");
+	        		num1 = Leer.datoInt();
+	        		System.out.println("Introduzca el segundo número:");
+	        		num2 = Leer.datoInt();
+	        		resultado = num1 - num2;
+	        		System.out.println("El resultado de restar " + num1 + " " + num2 + " es " + resultado);
                     break;
             case 3: // Multiplicar. Debes leer dos números enteros de entrada e imprimir su producto.
                     break;
