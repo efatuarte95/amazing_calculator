@@ -2,13 +2,11 @@ package examen;
 
 import java.util.Scanner;
 
-import utilidades.Leer;
-
 public class IncredibleCalculator {
 
     public static void main(String[] args) {
 
-    	int num1, num2, resultado;
+    	int num1, num2;
         System.out.println("Selecciona la operación que prefieras realizar: ");
         System.out.println("1. Sumar");
         System.out.println("2. Restar");
@@ -22,33 +20,39 @@ public class IncredibleCalculator {
         switch (opcion) {
             case 1: //Sumar. Debes leer dos numeros enteros de entrada e imprimir su suma
             		System.out.println("Introduzca el primer número:");
-            		num1 = Leer.datoInt();
+	        		num1 = leerEnteroEntrada();
             		System.out.println("Introduzca el segundo número:");
-            		num2 = Leer.datoInt();
-            		resultado = num1 + num2;
-            		System.out.println("El resultado de sumar " + num1 + " " + num2 + " es " + resultado);
+	        		num2 = leerEnteroEntrada();
+            		System.out.println("El resultado de sumar " + num1 + " " + num2 + " es " + suma(num1, num2));
                     break;
             case 2: // Restar. Debes leer dos números enteros de entrada e imprimir su resta
 	            	System.out.println("Introduzca el primer número:");
-	        		num1 = Leer.datoInt();
+	        		num1 = leerEnteroEntrada();
 	        		System.out.println("Introduzca el segundo número:");
-	        		num2 = Leer.datoInt();
-	        		resultado = num1 - num2;
-	        		System.out.println("El resultado de restar " + num1 + " " + num2 + " es " + resultado);
+	        		num2 = leerEnteroEntrada();
+	        		System.out.println("El resultado de restar " + num1 + " y " + num2 + " es " + resta(num1, num2));
                     break;
             case 3: // Multiplicar. Debes leer dos números enteros de entrada e imprimir su producto.
 	            	System.out.println("Introduzca el primer número:");
-	        		num1 = Leer.datoInt();
+	        		num1 = leerEnteroEntrada();
 	        		System.out.println("Introduzca el segundo número:");
-	        		num2 = Leer.datoInt();
-	        		resultado = num1 * num2;
-	        		System.out.println("El resultado de multiplicar " + num1 + " " + num2 + " es " + resultado);
+	        		num2 = leerEnteroEntrada();
+	        		System.out.println("El resultado de multiplicar " + num1 + " y " + num2 + " es " + multiplicacion(num1, num2));
                     break;
             case 4: // Multiplicar. Debes leer dos números enteros de entrada e imprimir su división entera.
-                    break;
+	            	System.out.println("Introduzca el primer número:");
+	        		num1 = leerEnteroEntrada();
+	        		System.out.println("Introduzca el segundo número:");
+	        		num2 = leerEnteroEntrada();
+	        		System.out.printf("El resultado de dividir " + num1 + " y " + num2 + " es %.0f", divisionEntera(num1, num2));
+	                break;
             case 5: // Multiplicar. Debes leer dos números enteros de entrada e imprimir su división con decimales.
-                    break;
-
+	            	System.out.println("Introduzca el primer número:");
+	        		num1 = leerEnteroEntrada();
+	        		System.out.println("Introduzca el segundo número:");
+	        		num2 = leerEnteroEntrada();
+	        		System.out.printf("El resultado de dividir " + num1 + " y " + num2 + " es %.2f", divisionConDecimales(num1, num2));
+	                break;
         }
 
     }
